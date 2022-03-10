@@ -8,10 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		5E74B11B1BF28598944CA22A /* UITextLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E74B40A81469B3DC3BE4776 /* UITextLabel.swift */; };
+		5E74B19FD43C8DF435112610 /* APIResultDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E74B8DC829535CBA39EE0BA /* APIResultDelegate.swift */; };
+		5E74B28BF94278016D7A2887 /* BookListDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E74BC59DB8B7799E63F5795 /* BookListDelegate.swift */; };
+		5E74B3E63073D96058E8D719 /* BookListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E74B0EA25EE774C3EE08328 /* BookListViewModel.swift */; };
+		5E74B47F1AE8299629D220EE /* BooksData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E74B689DA9A7022D72E88F4 /* BooksData.swift */; };
+		5E74B595D6F1BE9414D0A622 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E74B986D50EFA2300C34936 /* RegisterViewController.swift */; };
 		5E74B7811816BF293182889F /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E74BD8C34C8E70FDC2E9594 /* CustomTextField.swift */; };
 		5E74B90CA25F8EEF8C6AF740 /* BookListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E74BA91078CBBBCCEBF760F /* BookListViewController.swift */; };
+		5E74BABBCC6BFCBC9C6E903F /* ApiProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E74B80B782537C116733F82 /* ApiProvider.swift */; };
 		5E74BD7BE7DDF589354EDFB6 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E74BBCCC4ECBF2E74151EAC /* UIViewExtensions.swift */; };
 		5E74BD9F86BA074EB9A96B28 /* UIButtonExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E74B392E63904A992E595FA /* UIButtonExtensions.swift */; };
+		5E74BE7540B3CB6C8435C09C /* BooksModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5E74B9182DD86184681842A2 /* BooksModel.swift */; };
 		E001228927A8CFC7002909B6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E001228827A8CFC7002909B6 /* AppDelegate.swift */; };
 		E001228B27A8CFC7002909B6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E001228A27A8CFC7002909B6 /* SceneDelegate.swift */; };
 		E001228D27A8CFC7002909B6 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E001228C27A8CFC7002909B6 /* LoginViewController.swift */; };
@@ -20,13 +27,21 @@
 		E001229527A8CFC9002909B6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E001229327A8CFC9002909B6 /* LaunchScreen.storyboard */; };
 		E00122A527A8D44E002909B6 /* BaseUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00122A427A8D44E002909B6 /* BaseUIViewController.swift */; };
 		E00122A827A8D49F002909B6 /* ConstraintExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E00122A727A8D49F002909B6 /* ConstraintExtensions.swift */; };
+		E01E249127D6FD8A00FB8BF5 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = E01E249027D6FD8A00FB8BF5 /* UserPreferences.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E74B0EA25EE774C3EE08328 /* BookListViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookListViewModel.swift; sourceTree = "<group>"; };
 		5E74B392E63904A992E595FA /* UIButtonExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIButtonExtensions.swift; sourceTree = "<group>"; };
 		5E74B40A81469B3DC3BE4776 /* UITextLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextLabel.swift; sourceTree = "<group>"; };
+		5E74B689DA9A7022D72E88F4 /* BooksData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksData.swift; sourceTree = "<group>"; };
+		5E74B80B782537C116733F82 /* ApiProvider.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ApiProvider.swift; sourceTree = "<group>"; };
+		5E74B8DC829535CBA39EE0BA /* APIResultDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIResultDelegate.swift; sourceTree = "<group>"; };
+		5E74B9182DD86184681842A2 /* BooksModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BooksModel.swift; sourceTree = "<group>"; };
+		5E74B986D50EFA2300C34936 /* RegisterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		5E74BA91078CBBBCCEBF760F /* BookListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookListViewController.swift; sourceTree = "<group>"; };
 		5E74BBCCC4ECBF2E74151EAC /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
+		5E74BC59DB8B7799E63F5795 /* BookListDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookListDelegate.swift; sourceTree = "<group>"; };
 		5E74BD8C34C8E70FDC2E9594 /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextField.swift; sourceTree = "<group>"; };
 		E001228527A8CFC7002909B6 /* Library.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Library.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E001228827A8CFC7002909B6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +53,7 @@
 		E001229627A8CFC9002909B6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E00122A427A8D44E002909B6 /* BaseUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseUIViewController.swift; sourceTree = "<group>"; };
 		E00122A727A8D49F002909B6 /* ConstraintExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConstraintExtensions.swift; sourceTree = "<group>"; };
+		E01E249027D6FD8A00FB8BF5 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +67,22 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5E74B100098CF99F46F9B6A7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5E74B986D50EFA2300C34936 /* RegisterViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		5E74B183A0A8EFAB62A07E8D /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				5E74BC59DB8B7799E63F5795 /* BookListDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 		5E74B1A674699CEAA237A1EB /* Base */ = {
 			isa = PBXGroup;
 			children = (
@@ -59,12 +91,30 @@
 			path = Base;
 			sourceTree = "<group>";
 		};
+		5E74B28DA4A3E2129C105E00 /* Delegate */ = {
+			isa = PBXGroup;
+			children = (
+				5E74B8DC829535CBA39EE0BA /* APIResultDelegate.swift */,
+			);
+			path = Delegate;
+			sourceTree = "<group>";
+		};
 		5E74B503F2FE0DC37E949E8F /* BookList */ = {
 			isa = PBXGroup;
 			children = (
 				5E74BA812302A504B710AFD0 /* View */,
+				5E74BA0767B4324707FE41F3 /* ViewModel */,
+				5E74B183A0A8EFAB62A07E8D /* Delegate */,
 			);
 			path = BookList;
+			sourceTree = "<group>";
+		};
+		5E74BA0767B4324707FE41F3 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				5E74B0EA25EE774C3EE08328 /* BookListViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 		5E74BA812302A504B710AFD0 /* View */ = {
@@ -81,6 +131,41 @@
 				5E74BD8C34C8E70FDC2E9594 /* CustomTextField.swift */,
 			);
 			path = Widgets;
+			sourceTree = "<group>";
+		};
+		5E74BB7C5450926F690DA601 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				5E74B9182DD86184681842A2 /* BooksModel.swift */,
+				5E74B689DA9A7022D72E88F4 /* BooksData.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		5E74BD5815400C59B4A2CD2D /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				E01E248F27D6FD7000FB8BF5 /* Preferences */,
+				5E74BE8DF2B3F702C2F9BF60 /* API */,
+				5E74B28DA4A3E2129C105E00 /* Delegate */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		5E74BE8DF2B3F702C2F9BF60 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				5E74B80B782537C116733F82 /* ApiProvider.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		5E74BFFDFC30D1872D4F093E /* Register */ = {
+			isa = PBXGroup;
+			children = (
+				5E74B100098CF99F46F9B6A7 /* View */,
+			);
+			path = Register;
 			sourceTree = "<group>";
 		};
 		E001227C27A8CFC7002909B6 = {
@@ -113,6 +198,9 @@
 				5E74B1A674699CEAA237A1EB /* Base */,
 				5E74BAEE205B68166739C61F /* Widgets */,
 				5E74B503F2FE0DC37E949E8F /* BookList */,
+				5E74BFFDFC30D1872D4F093E /* Register */,
+				5E74BD5815400C59B4A2CD2D /* Provider */,
+				5E74BB7C5450926F690DA601 /* Model */,
 			);
 			path = Library;
 			sourceTree = "<group>";
@@ -142,6 +230,14 @@
 				5E74B392E63904A992E595FA /* UIButtonExtensions.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		E01E248F27D6FD7000FB8BF5 /* Preferences */ = {
+			isa = PBXGroup;
+			children = (
+				E01E249027D6FD8A00FB8BF5 /* UserPreferences.swift */,
+			);
+			path = Preferences;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -220,11 +316,19 @@
 				E00122A527A8D44E002909B6 /* BaseUIViewController.swift in Sources */,
 				E001228927A8CFC7002909B6 /* AppDelegate.swift in Sources */,
 				E001228B27A8CFC7002909B6 /* SceneDelegate.swift in Sources */,
+				E01E249127D6FD8A00FB8BF5 /* UserPreferences.swift in Sources */,
 				5E74B7811816BF293182889F /* CustomTextField.swift in Sources */,
 				5E74BD7BE7DDF589354EDFB6 /* UIViewExtensions.swift in Sources */,
 				5E74B11B1BF28598944CA22A /* UITextLabel.swift in Sources */,
 				5E74BD9F86BA074EB9A96B28 /* UIButtonExtensions.swift in Sources */,
 				5E74B90CA25F8EEF8C6AF740 /* BookListViewController.swift in Sources */,
+				5E74B595D6F1BE9414D0A622 /* RegisterViewController.swift in Sources */,
+				5E74BE7540B3CB6C8435C09C /* BooksModel.swift in Sources */,
+				5E74B47F1AE8299629D220EE /* BooksData.swift in Sources */,
+				5E74B3E63073D96058E8D719 /* BookListViewModel.swift in Sources */,
+				5E74B28BF94278016D7A2887 /* BookListDelegate.swift in Sources */,
+				5E74BABBCC6BFCBC9C6E903F /* ApiProvider.swift in Sources */,
+				5E74B19FD43C8DF435112610 /* APIResultDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

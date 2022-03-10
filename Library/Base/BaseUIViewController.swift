@@ -21,14 +21,37 @@ open class BaseUIViewController: UIViewController {
     lazy var grid = width / 12
     
     lazy var titleFont = "Marker Felt Wide"
+
+    private lazy var ivBackButton : UIImageView = UIImageView()
     
     open override func viewDidLoad() {
         view.backgroundColor = .secondarySystemBackground
+        addBackButton()
     }
 
     func moveTo(screen: UIViewController, showStyle: UIModalPresentationStyle = .automatic) {
         screen.modalPresentationStyle = showStyle
         present(screen, animated: true)
+    }
+
+    private func addBackButton() {
+        view.addSubview(ivBackButton)
+        ivBackButton.isUserInteractionEnabled = true
+        ivBackButton.image = UIImage(named: "ic_back")
+        ivBackButton.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(onBackPress)))
+        ivBackButton.addAnchorsAndSize(width: grid * 0.6, height: grid * 0.6, left: margin, top: grid * 2, right: nil, bottom: nil)
+    }
+
+    func getBackButton() -> UIView {
+        return ivBackButton
+    }
+    
+    func hideBackbutton() {
+        ivBackButton.isHidden = true
+    }
+
+    @objc private func onBackPress() {
+        dismiss(animated: true)
     }
     
 }

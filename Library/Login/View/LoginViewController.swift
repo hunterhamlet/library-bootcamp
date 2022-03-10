@@ -11,7 +11,7 @@ class LoginViewController: BaseUIViewController {
 
     private let ivLibrary : UIImageView = UIImageView()
     private let tlWelcome : UILabel = UILabel()
-    private let tlRegister : UILabel = UILabel()
+    private let tlRegister : UIButton = UIButton()
     private let ilEmail : CustomTextField = CustomTextField(placeHolder: "Email",addErrorFunction: true)
     private let ilPass : CustomTextField = CustomTextField(placeHolder: "Password", isPassField: true, addErrorFunction: true)
     private let bLogin: UIButton = UIButton()
@@ -52,14 +52,14 @@ class LoginViewController: BaseUIViewController {
         bLoginWithApple.addAnchorsAndSize(width: nil, height: 50, left: margin, top: grid / 2, right: margin, bottom: nil, withAnchor: .top, relativeToView: bLogin)
 
         view.addSubview(tlRegister)
-        tlRegister.text = "No tienes cuenta? Registrate."
-        tlRegister.applyCustomFont()
-        tlRegister.textAlignment = .center
-        tlRegister.textColor = .blue
+        tlRegister.setTitle("No tienes cuenta? Registrate.", for: .normal)
+        tlRegister.titleLabel?.font = view.getCustomFont()
+        tlRegister.setTitleColor(.blue, for: .normal)
+        tlRegister.addTarget(self, action: #selector(moveToRegister), for: .touchUpInside)
         tlRegister.addAnchorsAndSize(width: nil, height: grid, left: margin, top: grid * 0.5, right: margin, bottom: nil, withAnchor: .top, relativeToView: bLoginWithApple)
     }
 
-    @objc func checkEmailAndPassEmpty() {
+    @objc private func checkEmailAndPassEmpty() {
         if (checkEmail() && checkPass()) {
             moveTo(screen: BookListViewController(), showStyle: .fullScreen)
         }
@@ -87,5 +87,10 @@ class LoginViewController: BaseUIViewController {
             return false
         }
     }
+
+    @objc private func moveToRegister() {
+        moveTo(screen: RegisterViewController(), showStyle: .fullScreen)
+    }
+
 }
 
