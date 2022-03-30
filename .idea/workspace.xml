@@ -2,35 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bb819f14-6ad6-469d-a005-047b94450e0b" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Library/Assets.xcassets/ic_back.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Assets.xcassets/ic_back.imageset/left-arrow-angle-big-gross-symbol.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Assets.xcassets/ic_hide_pass.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Assets.xcassets/ic_hide_pass.imageset/hidden.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Assets.xcassets/ic_show_pass.imageset/Contents.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Assets.xcassets/ic_show_pass.imageset/eye.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/BookList/Delegate/BookListDelegate.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/BookList/ViewModel/BookListViewModel.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Model/BooksData.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Model/BooksModel.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Provider/API/ApiProvider.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Provider/Actions/APIResult.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Provider/Actions/UIActions.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Provider/Delegate/APIResultDelegate.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Provider/Preferences/UserPreferences.swift" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Library/Register/View/RegisterViewController.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/BookList/View/RowBookView.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Provider/API/DataParse.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Provider/API/Endpoints.swift" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Library/Utils/Dimensions/Dimensions.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library.xcodeproj/project.pbxproj" beforeDir="false" afterPath="$PROJECT_DIR$/Library.xcodeproj/project.pbxproj" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Base/BaseUIViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Base/BaseUIViewController.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/BookList/Delegate/BookListDelegate.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Library/BookList/Delegate/BookListDelegate.swift" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/BookList/View/BookListViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Library/BookList/View/BookListViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Login/View/LoginViewController.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Login/View/LoginViewController.swift" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Widgets/CustomTextField.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Widgets/CustomTextField.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/BookList/ViewModel/BookListViewModel.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Library/BookList/ViewModel/BookListViewModel.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Provider/API/ApiProvider.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Provider/API/ApiProvider.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Utils/ConstraintExtensions.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Utils/Extensions/ConstraintExtensions.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Utils/UIButtonExtensions.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Utils/Extensions/UIButtonExtensions.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Utils/UITextLabel.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Utils/Extensions/UITextLabel.swift" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/Utils/UIViewExtensions.swift" beforeDir="false" afterPath="$PROJECT_DIR$/Library/Utils/Extensions/UIViewExtensions.swift" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ExecutionTargetManager" SELECTED_TARGET="iphonesimulator_38EDDADC-28CC-483F-B57C-19996D3C83EB" />
+  <component name="ExecutionTargetManager" SELECTED_TARGET="iphoneos_" />
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
@@ -54,6 +47,7 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_MARK_IGNORED_FILES_AS_EXCLUDED" value="true" />
     <property name="OBJC.PRESERVED_TARGET_SELECTION" value="Library" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -86,7 +80,9 @@
       <workItem from="1644200174252" duration="11686000" />
       <workItem from="1644326934310" duration="22920000" />
       <workItem from="1644502141085" duration="5252000" />
-      <workItem from="1646877821531" duration="452000" />
+      <workItem from="1646877821531" duration="7022000" />
+      <workItem from="1646934092655" duration="531000" />
+      <workItem from="1648164225526" duration="196000" />
     </task>
     <servers />
   </component>
