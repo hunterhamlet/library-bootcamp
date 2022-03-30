@@ -17,7 +17,8 @@ class BookListViewController: BaseUIViewController {
     private let separatorTwo: UIView = UIView()
     private let bookList: UITableView = UITableView()
 
-    private var viewModel : BookListViewModel?
+    private var viewModel: BookListViewModel?
+    private var dataSource: [Viewable] = [Viewable]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -67,34 +68,46 @@ class BookListViewController: BaseUIViewController {
         btAuthors.titleLabel?.font = view.getCustomFont()
         btAuthors.addTarget(self, action: #selector(getBookByAuthors), for: .touchUpInside)
         btAuthors.addAnchorsAndCenter(centerX: false, centerY: true, width: nil, height: nil, left: nil, top: nil, right: margin, bottom: nil)
-        btAuthors.addAnchors(left: margin, top: nil, right: nil, bottom: nil,withAnchor: .left,relativeToView: btCategories)
+        btAuthors.addAnchors(left: margin, top: nil, right: nil, bottom: nil, withAnchor: .left, relativeToView: btCategories)
     }
 
     private func addBokList() {
+        bookList.delegate = self
+        bookList.dataSource = self
         view.addSubview(bookList)
-        bookList.backgroundColor = .cyan
-        //bookList.delegate = self
         bookList.addAnchorsAndSize(width: nil, height: nil, left: margin, top: margin, right: margin, bottom: margin * 2, withAnchor: .top, relativeToView: containerFilter)
     }
 
     @objc private func getBookByCategories() {
-
+        viewModel?.getCategories()
     }
 
     @objc private func getBooks() {
-
+        viewModel?.getBooks()
     }
 
     @objc private func getBookByAuthors() {
-
+        viewModel?.getAuthors()
     }
 
 }
 
-extension BookListViewController : BookListDelegate {
-
-    func success(bookData: BooksModel) {
-        print("booklist in screen \(bookData.data)")
+extension BookListViewController: BookListDelegate {
+    
+    func successBooks(bookData: BooksResponse) {
+        dataSource = bookData.data
+        bookList.reloadData()
+    }
+    
+    func successAuthors(authorData: AuthorsResponse){
+        dataSource = authorData.data
+        bookList.reloadData()
+    }
+    
+    func successCategories(categoriesResponse: CategoriesResponse) {
+        print("categories: \(categoriesResponse)")
+        dataSource = categoriesResponse.data
+        bookList.reloadData()
     }
 
     func error(message: String) {
@@ -103,15 +116,27 @@ extension BookListViewController : BookListDelegate {
 }
 
 
-/*
-extension  BookListViewController : UITableViewDataSource, UITableViewDelegate {
+extension BookListViewController: UITableViewDelegate {
+
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        print("Estoy en la seccion \(indexPath.section) en la celda \(indexPath.row)")
+    }
+
+}
+
+extension BookListViewController: UITableViewDataSource {
+
+    public func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        <#code#>
+        return dataSource.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        <#code#>
+        let title = dataSource[indexPath.row].name
+        return RowBookView(title: title)
     }
 
-}*/
+}

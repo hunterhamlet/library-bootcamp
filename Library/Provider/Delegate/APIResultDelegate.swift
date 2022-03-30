@@ -5,6 +5,6 @@
 import Foundation
 
 protocol APIResultDelegate: AnyObject {
-    func success(data: BooksModel)
+    func success(data: BooksResponse)
     func error(error: String)
 }

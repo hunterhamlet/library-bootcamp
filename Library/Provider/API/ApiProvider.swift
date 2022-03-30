@@ -6,59 +6,52 @@ import Foundation
 
 private let BASE_URL = "https://playground-bookstore.herokuapp.com/api/v1"
 
-struct ApiProvider {
+class ApiProvider {
 
     enum APIRequest: String {
         case BOOKS = "/books"
     }
 
-    func getBooks(apiResultDelegate: APIResultDelegate) {
-        if let urlBooks = URL(string: "\(BASE_URL)\(APIRequest.BOOKS.rawValue)") {
-            let sessions = URLSession(configuration: .default)
-            let task = sessions.dataTask(with: urlBooks) { data, response, error in
+    lazy var urlSession: URLSession = URLSession(configuration: .default)
+    var dataTask: URLSessionDataTask?
 
-                if error != nil {
-                    apiResultDelegate.error(error: "Hubo un error en nuestros servicios")
+    func performRequest<DataExpected: Codable>(endpoint: Endpoints, completion: @escaping (DataExpected) -> Void, onError: @escaping (Error?) -> Void) {
+
+        let dataParser: DataParser<DataExpected> = DataParser<DataExpected>()
+
+        guard let completeURL = endpoint.completeURL else {
+            // En caso de que no pudimos obtener el url invocamos el error.
+            onError(nil)
+            return
+        }
+        // Cancelamos cualquier peticion anterior
+        dataTask?.cancel()
+        // Por medio de url session creamos una nueva petición
+        dataTask = urlSession.dataTask(with: completeURL, completionHandler: { responseData , responseURL, error in
+            if let error = error {
+                // Tenemos que regresarnos al main para actualizar al controller con el error
+                DispatchQueue.main.async {
+                    onError(error)
                 }
+            }
 
-                if let data = data {
-                    let dataString = String(data: data, encoding: .utf8)
-                    if let _booksNotNull = parseBookJSON(booksData: data) {
-                        apiResultDelegate.success(data: _booksNotNull)
-                    }
+            // Checamos que los datos existan, que el status code sea 200 y obtenemos los datos parseados.
+            guard let data: Data = responseData,
+                  let response: HTTPURLResponse = responseURL as? HTTPURLResponse,
+                  response.statusCode == 200,
+                  let parsedData: DataExpected = dataParser.parseData(data: data) else {
+                DispatchQueue.main.async {
+                    onError(error)
                 }
-
+                return
             }
-            task.resume()
-        }
-    }
-
-    private func parseBookJSON(booksData: Data) -> BooksModel? {
-        let decoder = JSONDecoder()
-        do {
-            let decodedData = try decoder.decode(BooksData.self, from: booksData)
-            let bookListMap = decodedData.data.map { data -> DatumModel? in
-                parseDatumJSON(bookData: data)
+            DispatchQueue.main.async {
+                completion(parsedData)
             }
-            let bookList = BooksModel(data: bookListMap)
-            return bookList
-        } catch {
-            return nil
-        }
+        })
+        // Ejecutamos la petición
+        dataTask?.resume()
     }
 
-    private func parseDatumJSON(bookData: DatumData?) -> DatumModel? {
-        return DatumModel(type: bookData?.type ?? "NONE", id: bookData?.id ?? "NONE")
-    }
-
-    private func parseAttributesJSON(bookData: AttributesData) -> AttributesModel? {
-        do {
-            let book = AttributesModel(title: bookData.title, slug: bookData.slug, content: bookData.content, createdAt: bookData.createdAt, updatedAt: bookData.updatedAt)
-            return book
-
-        } catch {
-            return nil
-        }
-    }
 
 }
