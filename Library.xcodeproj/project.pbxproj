@@ -40,6 +40,7 @@
 		E0716D2927EFF273003487DE /* BooksExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0716D2827EFF273003487DE /* BooksExtensions.swift */; };
 		E0716D2B27EFF2E4003487DE /* CategoriesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0716D2A27EFF2E4003487DE /* CategoriesResponse.swift */; };
 		E0716D2D27EFF31E003487DE /* CategoryExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0716D2C27EFF31D003487DE /* CategoryExtensions.swift */; };
+		E0C5140227F67C0E001C5DF0 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E0C5140127F67C0E001C5DF0 /* DetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		E0716D2827EFF273003487DE /* BooksExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BooksExtensions.swift; sourceTree = "<group>"; };
 		E0716D2A27EFF2E4003487DE /* CategoriesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesResponse.swift; sourceTree = "<group>"; };
 		E0716D2C27EFF31D003487DE /* CategoryExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryExtensions.swift; sourceTree = "<group>"; };
+		E0C5140127F67C0E001C5DF0 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,6 +293,7 @@
 		E0716D2227EFEFCC003487DE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				E0C513FF27F67BE7001C5DF0 /* Detail */,
 				5E74BFFDFC30D1872D4F093E /* Register */,
 				5E74B503F2FE0DC37E949E8F /* BookList */,
 				E00122A027A8D377002909B6 /* Login */,
@@ -304,6 +307,22 @@
 				E0716D2627EFF0CD003487DE /* DataType.swift */,
 			);
 			path = Enum;
+			sourceTree = "<group>";
+		};
+		E0C513FF27F67BE7001C5DF0 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				E0C5140027F67BEF001C5DF0 /* View */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		E0C5140027F67BEF001C5DF0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				E0C5140127F67C0E001C5DF0 /* DetailViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -394,6 +413,7 @@
 				E0716D1D27EFD96B003487DE /* AuthorsResponse.swift in Sources */,
 				E01E249127D6FD8A00FB8BF5 /* UserPreferences.swift in Sources */,
 				5E74B7811816BF293182889F /* CustomTextField.swift in Sources */,
+				E0C5140227F67C0E001C5DF0 /* DetailViewController.swift in Sources */,
 				5E74B90CA25F8EEF8C6AF740 /* BookListViewController.swift in Sources */,
 				5E74B595D6F1BE9414D0A622 /* RegisterViewController.swift in Sources */,
 				5E74B3E63073D96058E8D719 /* BookListViewModel.swift in Sources */,

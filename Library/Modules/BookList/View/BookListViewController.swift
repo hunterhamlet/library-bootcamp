@@ -120,6 +120,9 @@ extension BookListViewController: UITableViewDelegate {
 
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         print("Estoy en la seccion \(indexPath.section) en la celda \(indexPath.row)")
+        let detailScreen = DetailViewController()
+        detailScreen.viewable = dataSource[indexPath.row]
+        moveTo(screen: detailScreen, showStyle: .fullScreen)
     }
 
 }
